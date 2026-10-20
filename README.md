@@ -18,4 +18,4 @@ python main.py
 - src/ : data generation, preprocessing, training, evaluation
 - data/ : raw and processed CSVs
 - models/ : saved models
-- main.py : runs the full pipeline
+- main.py : runs the full pipelinePracticing Git.
