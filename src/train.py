@@ -1,6 +1,6 @@
 import pandas as pd
 import joblib
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 
 def train_model(df: pd.DataFrame):
@@ -11,7 +11,7 @@ def train_model(df: pd.DataFrame):
         X, y, test_size=0.2, random_state=42, stratify=y
     )
 
-    model = RandomForestClassifier(n_estimators=200, random_state=42)
+    model = LogisticRegression(max_iter=1000)
     model.fit(X_train, y_train)
 
     joblib.dump(model, "models/churn_model.pkl")
